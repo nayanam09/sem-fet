@@ -3,51 +3,70 @@
   <head>
     <title>Portfolio</title>
     <style>
-    body {
-      background-color:lightpink;
+      body {
+        background-color: lightpink;
       }
-    h1 {
-      text-align : center;
-      text-font: 50px;
-      color: blue;
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        color: blue;
       }
-    h2 {
-      text-align : center;
-      color: green;
+      h2 {
+        text-align: center;
+        color: green;
       }
-    p {
-      text-align : center;
-      text-font: 30px;
-      color: black;
+      p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
       }
     </style>
-    
   </head>
+
   <body>
-    <center><h1><strong>NAYANA M</strong></h1>
-    <h2>Stuyding in Mangalore Institue of Technology and Engineering.</h2>
-    <p>I am a 2<sup>nd</sup> year engineering student purseuing engineering in computer science and engineering</p>
-    <a href="https://github.com/nayanam09">Click here for github profile</a><br><br>
-    <p>I mainly work with Java and Python and have a good 
-        understanding of OOP, data structures, and algorithms.<br>
+    <center>
+      <h1><strong>NAYANA M</strong></h1>
+
+      <!-- Added ID here -->
+      <h2 id="course">
+        Studying in Mangalore Institute of Technology and Engineering.
+      </h2>
+
+      <p>
+        I am a 2<sup>nd</sup> year engineering student pursuing engineering in
+        computer science and engineering
+      </p>
+
+      <a href="https://github.com/nayanam09">Click here for github profile</a>
+      <br><br>
+
+      <!-- Button added -->
+      <button onclick="changeCourse()">Change Course</button>
+
+      <p>
+        I mainly work with Java and Python and have a good understanding of OOP,
+        data structures, and algorithms.<br>
         I’ve also learned basic web development using HTML.
         I’m interested in software building using latest technology.<br>
-        Along with coding, I use design thinking methods to 
-        build practical and user-focused solutions.<br>
-    </p>
+        Along with coding, I use design thinking methods to build practical and user-focused solutions.<br>
+      </p>
+
       <hr>
-      <a href="https://nayanam09.github.io/sem-fet/" target="_blank"> HOME PAGE</a>
+      <a href="https://nayanam09.github.io/sem-fet/" target="_blank">
+        HOME PAGE
+      </a>
     </center>
+
+    <script>
+      function changeCourse() {
+        let newCourse = prompt("Enter new course/title:");
+
+        if (newCourse !== null && newCourse.trim() !== "") {
+          document.getElementById("course").innerText = newCourse;
+        } else {
+          alert("Please enter valid text");
+        }
+      }
+    </script>
   </body>
 </html>
-<script>
-        function changeCourse() {
-            let newCourse = prompt("Enter new course/title:");
-
-            if (newCourse !== null && newCourse.trim() !== "") {
-                document.getElementById("course").innerText = newCourse;
-            } else {
-                alert("Please enter valid text");
-            }
-        }
-</script>
