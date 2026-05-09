@@ -2,54 +2,90 @@
 <html>
   <head>
     <title>Portfolio</title>
+
     <style>
       body {
         background-color: lightpink;
+        font-family: Arial, sans-serif;
       }
+
       h1 {
         text-align: center;
         font-size: 50px;
         color: blue;
       }
+
       h2 {
         text-align: center;
         color: green;
       }
+
       p {
         text-align: center;
         font-size: 20px;
         color: black;
       }
+
+      .btn {
+        padding: 10px 18px;
+        margin: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: blue;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: darkblue;
+      }
+
+      .center-box {
+        text-align: center;
+      }
     </style>
   </head>
 
   <body>
-    <center>
+    <div class="center-box">
       <h1><strong>NAYANA M</strong></h1>
+
       <h2 id="course">
         Studying in Mangalore Institute of Technology and Engineering.
       </h2>
+      <button class="btn" onclick="changeCourse()">
+        Edit Course
+      </button>
+
       <p>
         I am a 2<sup>nd</sup> year engineering student pursuing engineering in
         computer science and engineering
       </p>
 
-      <a href="https://github.com/nayanam09">Click here for github profile</a>
-      <br><br>
-      <button onclick="changeCourse()">Change Course</button>
+      <a href="https://github.com/nayanam09" target="_blank">
+        Click here for github profile
+      </a>
+
+      <br /><br />
+
       <p>
-        I mainly work with Java and Python and have a good understanding of OOP,
-        data structures, and algorithms.<br>
-        I’ve also learned basic web development using HTML.
-        I’m interested in software building using latest technology.<br>
-        Along with coding, I use design thinking methods to build practical and user-focused solutions.<br>
+        I mainly work with Java and Python and have a good understanding of
+        OOP, data structures, and algorithms.<br />
+
+        I’ve also learned basic web development using HTML.<br />
+
+        I’m interested in software building using latest technology.<br />
+
+        Along with coding, I use design thinking methods to build practical and
+        user-focused solutions.
       </p>
 
-      <hr>
-      <a href="https://nayanam09.github.io/sem-fet/" target="_blank">
-        HOME PAGE
-      </a>
-    </center>
+      <hr />
+      <button class="btn" onclick="goHome()">
+        Go To Home Page
+      </button>
+    </div>
 
     <script>
       function changeCourse() {
@@ -60,6 +96,9 @@
         } else {
           alert("Please enter valid text");
         }
+      }
+      function goHome() {
+        window.location.href = "https://nayanam09.github.io/sem-fet/";
       }
     </script>
   </body>
