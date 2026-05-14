@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        .container {
+    position: relative;
+    cursor:crosshair;
+    }
+    .red-box {
+    position: relative;
+    z-index: 1;
+    background: red;
+    height: 500px;
+    width: 200px;
+    top: 10px;
+    left: 50px;
+    }
+  
+    .blue-box {
+    position: absolute;
+    z-index: 3;
+    background: rgb(40, 80, 187);
+    height: 500px;  
+    width: 200px;
+    left: 120px;
+    top: 10px;
+    }
+  
+    .yellow-box {
+    position: absolute;
+    z-index: 4;
+    background: rgb(255, 247, 24);
+    height: 500px;  
+    width: 200px;
+    left: 160px;
+    top: 10px;
+    }
 
+    .green-box {
+    position: absolute;
+    z-index: 2; 
+    background: rgb(12, 240, 12);
+    height: 500px;
+    width: 200px;
+    left: 80px;
+    top:10px;
+    }
+    button{
+        padding: 20px;
+        background-color: antiquewhite;
+        margin-top: 20px;
+    }
+    #homepage{    
+    position: absolute;
+    margin-left: 30px;
+    padding: 10px 20px; 
+    background: #a9abd8;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="red-box">Red box</div>
+        <div class="blue-box">Blue box</div>
+        <div class="green-box">Green box</div>
+        <div class="yellow-box">yellow box</div>
+    </div>
+    <div class="button">
+        <button id="red">Red layer</button>
+        <button id="green">Green layer</button>
+        <button id="Blue">Blue layer</button>
+        <button id="yellow">Yellow layer</button>
+        <a id="homepage" href="https://nayanam09.github.io/sem-fet/">Home Page</a>
+    </div>
+</body>
+<script>
+    let layer1 = document.querySelector(".red-box");
+    let layer2 = document.querySelector(".green-box");
+    let layer3 = document.querySelector(".blue-box");
+    let layer4 = document.querySelector(".yellow-box");
+    let topZ = 5;
+    function swapLayer(color){
+        let selectedLayer;
+        if(color === "red"){
+            selectedLayer = layer1;
+        }
+        else if(color === "green"){
+            selectedLayer = layer2;
+        }
+        else if(color === "blue"){
+            selectedLayer = layer3;
+        }
+        else if(color === "yellow"){
+            selectedLayer = layer4;
+        }
+        topZ++;
+        selectedLayer.style.zIndex = topZ;
+    }
+    document.getElementById("red").onclick = function(){
+        swapLayer("red");
+    }
+    document.getElementById("green").onclick = function(){
+        swapLayer("green");
+    }
+    document.getElementById("Blue").onclick = function(){
+        swapLayer("blue");
+    }
+    document.getElementById("yellow").onclick = function(){
+        swapLayer("yellow");
+    }
+</script>
+</html>
