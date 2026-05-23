@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPL Ticket Booking</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>IPL Ticket Booking</h1>
+    <p>Book your favorite IPL match tickets now!</p>
+  </header>
+
+  <section class="matches">
+
+    <div class="card">
+      <h2>RCB vs GT</h2>
+      <p> Dharamsala Stadium</p>
+      <p>26 May 2026</p>
+      <button onclick="bookTicket('RCB vs GT')">Book Now</button>
+    </div>
+
+    <div class="card">
+      <h2>MI vs RR</h2>
+      <p> Wankhede Stadium</p>
+      <p> 24 May 2026</p>
+      <button onclick="bookTicket('MI vs RR')">Book Now</button>
+    </div>
+
+    <div class="card">
+      <h2>KKR vs DC</h2>
+      <p>Eden Gardens</p>
+      <p>24 May 2026</p>
+      <button onclick="bookTicket('KKR vs DC')">Book Now</button>
+    </div>
+
+  </section>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+
+      <h2>Book Tickets</h2>
+
+      <form id="bookingForm">
+        <input type="text" id="matchName" readonly>
+
+        <input type="text" id="name" placeholder="Enter Your Name" required>
+
+        <input type="number" id="tickets" placeholder="Number of Tickets" required>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
