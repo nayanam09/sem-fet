@@ -4,7 +4,7 @@ const bookingForm = document.getElementById("bookingForm");
 const message = document.getElementById("message");
 
 function bookTicket(match) {
-  popup.style.display = "flex";
+  popup.style.display = "none";
   matchName.value = match;
 }
 
