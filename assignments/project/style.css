@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #121d37;
+  color: rgb(233, 229, 229);
+}
+
+header {
+  text-align:center;
+  padding: 30px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.matches {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #334155;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #f43f5e;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  position: relative;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
